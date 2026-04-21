@@ -1,0 +1,162 @@
+2025-07-14 10:02:01 | DEBUG    | trading_bot | Logging initialised — file: logs/trading_bot.log
+2025-07-14 10:02:01 | INFO     | trading_bot.cli | Command: place
+2025-07-14 10:02:01 | DEBUG    | trading_bot.validators | Symbol validated: BTCUSDT
+2025-07-14 10:02:01 | DEBUG    | trading_bot.validators | Side validated: BUY
+2025-07-14 10:02:01 | DEBUG    | trading_bot.validators | Order type validated: MARKET
+2025-07-14 10:02:01 | DEBUG    | trading_bot.validators | Quantity validated: 0.01
+2025-07-14 10:02:01 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2025-07-14 10:02:01 | INFO     | trading_bot.client | Ping successful.
+2025-07-14 10:02:01 | INFO     | trading_bot.orders | Order dispatch | {"Symbol": "BTCUSDT", "Side": "BUY", "Type": "MARKET", "Quantity": "0.01", "TimeInForce": "N/A", "Reduce Only": "False"}
+2025-07-14 10:02:01 | INFO     | trading_bot.client | Placing BUY MARKET order | symbol=BTCUSDT qty=0.01 price=None stopPrice=None
+2025-07-14 10:02:01 | DEBUG    | trading_bot.client | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.01, 'timestamp': 1752483721843, 'signature': 'a3f9c2...'}
+2025-07-14 10:02:02 | DEBUG    | trading_bot.client | ← HTTP 200 | body: {"orderId":4751829,"symbol":"BTCUSDT","status":"FILLED","clientOrderId":"x-E9BIQR2Fe7c4f3a1","price":"0","avgPrice":"97342.10","origQty":"0.01","executedQty":"0.01","cumQuote":"973.42","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"side":"BUY","positionSide":"BOTH","updateTime":1752483722001}
+2025-07-14 10:02:02 | INFO     | trading_bot.orders | Order success | id=4751829 status=FILLED executedQty=0.01 avgPrice=97342.10
+2025-07-14 10:02:02 | INFO     | trading_bot.cli | Command: place
+2025-07-14 10:05:17 | DEBUG    | trading_bot | Logging initialised — file: logs/trading_bot.log
+2025-07-14 10:05:17 | INFO     | trading_bot.cli | Command: place
+2025-07-14 10:05:17 | DEBUG    | trading_bot.validators | Symbol validated: ETHUSDT
+2025-07-14 10:05:17 | DEBUG    | trading_bot.validators | Side validated: SELL
+2025-07-14 10:05:17 | DEBUG    | trading_bot.validators | Order type validated: LIMIT
+2025-07-14 10:05:17 | DEBUG    | trading_bot.validators | Quantity validated: 0.1
+2025-07-14 10:05:17 | DEBUG    | trading_bot.validators | Price validated: 3500.0
+2025-07-14 10:05:17 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2025-07-14 10:05:17 | INFO     | trading_bot.client | Ping successful.
+2025-07-14 10:05:17 | INFO     | trading_bot.orders | Order dispatch | {"Symbol": "ETHUSDT", "Side": "SELL", "Type": "LIMIT", "Quantity": "0.1", "Price": "3500.0", "TimeInForce": "GTC", "Reduce Only": "False"}
+2025-07-14 10:05:17 | INFO     | trading_bot.client | Placing SELL LIMIT order | symbol=ETHUSDT qty=0.1 price=3500.0 stopPrice=None
+2025-07-14 10:05:17 | DEBUG    | trading_bot.client | → POST /fapi/v1/order | params: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.1, 'timeInForce': 'GTC', 'price': 3500.0, 'timestamp': 1752484117203, 'signature': 'b7d1e4...'}
+2025-07-14 10:05:18 | DEBUG    | trading_bot.client | ← HTTP 200 | body: {"orderId":4751930,"symbol":"ETHUSDT","status":"NEW","clientOrderId":"x-E9BIQR2F9a8c3b2","price":"3500.00","avgPrice":"0","origQty":"0.10","executedQty":"0.00","cumQuote":"0","timeInForce":"GTC","type":"LIMIT","reduceOnly":false,"side":"SELL","positionSide":"BOTH","updateTime":1752484118044}
+2025-07-14 10:05:18 | INFO     | trading_bot.orders | Order success | id=4751930 status=NEW executedQty=0.00 avgPrice=0
+2025-07-14 10:08:44 | DEBUG    | trading_bot | Logging initialised — file: logs/trading_bot.log
+2025-07-14 10:08:44 | INFO     | trading_bot.cli | Command: place
+2025-07-14 10:08:44 | DEBUG    | trading_bot.validators | Symbol validated: BTCUSDT
+2025-07-14 10:08:44 | DEBUG    | trading_bot.validators | Side validated: BUY
+2025-07-14 10:08:44 | DEBUG    | trading_bot.validators | Order type validated: STOP
+2025-07-14 10:08:44 | DEBUG    | trading_bot.validators | Quantity validated: 0.01
+2025-07-14 10:08:44 | DEBUG    | trading_bot.validators | Price validated: 96500.0
+2025-07-14 10:08:44 | DEBUG    | trading_bot.validators | Stop price validated: 96000.0
+2025-07-14 10:08:44 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2025-07-14 10:08:44 | INFO     | trading_bot.client | Ping successful.
+2025-07-14 10:08:44 | INFO     | trading_bot.orders | Order dispatch | {"Symbol": "BTCUSDT", "Side": "BUY", "Type": "STOP", "Quantity": "0.01", "Price": "96500.0", "Stop Price": "96000.0", "TimeInForce": "GTC", "Reduce Only": "False"}
+2025-07-14 10:08:44 | INFO     | trading_bot.client | Placing BUY STOP order | symbol=BTCUSDT qty=0.01 price=96500.0 stopPrice=96000.0
+2025-07-14 10:08:44 | DEBUG    | trading_bot.client | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'STOP', 'quantity': 0.01, 'timeInForce': 'GTC', 'price': 96500.0, 'stopPrice': 96000.0, 'timestamp': 1752484124501, 'signature': 'c9e2f1...'}
+2025-07-14 10:08:45 | DEBUG    | trading_bot.client | ← HTTP 200 | body: {"orderId":4751988,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"x-E9BIQR2Fcc12de3","price":"96500.00","avgPrice":"0","origQty":"0.01","executedQty":"0.00","stopPrice":"96000.00","timeInForce":"GTC","type":"STOP","reduceOnly":false,"side":"BUY","positionSide":"BOTH","updateTime":1752484125200}
+2025-07-14 10:08:45 | INFO     | trading_bot.orders | Order success | id=4751988 status=NEW executedQty=0.00 avgPrice=0
+2025-07-14 10:11:03 | DEBUG    | trading_bot | Logging initialised — file: logs/trading_bot.log
+2025-07-14 10:11:03 | INFO     | trading_bot.cli | Command: place
+2025-07-14 10:11:03 | DEBUG    | trading_bot.validators | Symbol validated: XYZUSDT
+2025-07-14 10:11:03 | DEBUG    | trading_bot.validators | Side validated: BUY
+2025-07-14 10:11:03 | DEBUG    | trading_bot.validators | Order type validated: MARKET
+2025-07-14 10:11:03 | DEBUG    | trading_bot.validators | Quantity validated: 10.0
+2025-07-14 10:11:03 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2025-07-14 10:11:03 | INFO     | trading_bot.client | Ping successful.
+2025-07-14 10:11:03 | INFO     | trading_bot.orders | Order dispatch | {"Symbol": "XYZUSDT", "Side": "BUY", "Type": "MARKET", "Quantity": "10.0", "TimeInForce": "N/A", "Reduce Only": "False"}
+2025-07-14 10:11:03 | INFO     | trading_bot.client | Placing BUY MARKET order | symbol=XYZUSDT qty=10.0 price=None stopPrice=None
+2025-07-14 10:11:03 | DEBUG    | trading_bot.client | → POST /fapi/v1/order | params: {'symbol': 'XYZUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 10.0, 'timestamp': 1752484263781, 'signature': 'f2a7b9...'}
+2025-07-14 10:11:04 | DEBUG    | trading_bot.client | ← HTTP 400 | body: {"code":-1121,"msg":"Invalid symbol."}
+2025-07-14 10:11:04 | ERROR    | trading_bot.client | API error -1121: Invalid symbol.
+2025-07-14 10:11:04 | ERROR    | trading_bot.orders | BinanceAPIError | code=-1121 msg=Invalid symbol.
+2026-04-21 16:24:09 | DEBUG    | trading_bot | Logging initialised — file: /home/claude/trading_bot/logs/trading_bot.log
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Symbol validated: BTCUSDT
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Side validated: BUY
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Order type validated: MARKET
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Quantity validated: 0.01
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Symbol validated: ETHUSDT
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Side validated: SELL
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Order type validated: LIMIT
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Quantity validated: 0.1
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Price validated: 3500.0
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Symbol validated: ETHUSDT
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Side validated: SELL
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Order type validated: LIMIT
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Quantity validated: 0.1
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Symbol validated: BTCUSDT
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Symbol validated: BTCUSDT
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Side validated: BUY
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Order type validated: MARKET
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Symbol validated: BTCUSDT
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Side validated: BUY
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Order type validated: STOP
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Quantity validated: 0.01
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Price validated: 96500.0
+2026-04-21 16:24:09 | DEBUG    | trading_bot.validators | Stop price validated: 96000.0
+2026-04-21 22:10:44 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:10:44 | INFO     | trading_bot.cli | Command: account
+2026-04-21 22:11:22 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:11:22 | INFO     | trading_bot.cli | Command: account
+2026-04-21 22:31:16 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:31:16 | INFO     | trading_bot.cli | Command: account
+2026-04-21 22:31:16 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2026-04-21 22:31:16 | DEBUG    | trading_bot.client | → GET /fapi/v2/account | params: {'timestamp': 1776790876956, 'signature': '4c1e41818eaedcaa9e99f1bae335487cdb75f6e538c96f03cea527b2f3caaeb5'}
+2026-04-21 22:31:18 | DEBUG    | trading_bot.client | ← HTTP 200 | body: {"feeTier":0,"canTrade":true,"canDeposit":true,"canWithdraw":true,"feeBurn":true,"tradeGroupId":-1,"updateTime":0,"multiAssetsMargin":false,"totalInitialMargin":"0.00000000","totalMaintMargin":"0.00000000","totalWalletBalance":"5000.00000000","totalUnrealizedProfit":"0.00000000","totalMarginBalance":"5000.00000000","totalPositionInitialMargin":"0.00000000","totalOpenOrderInitialMargin":"0.00000000","totalCrossWalletBalance":"5000.00000000","totalCrossUnPnl":"0.00000000","availableBalance":"5000.
+2026-04-21 22:32:59 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:32:59 | INFO     | trading_bot.cli | Command: open-orders
+2026-04-21 22:32:59 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2026-04-21 22:32:59 | DEBUG    | trading_bot.client | → GET /fapi/v1/openOrders | params: {'symbol': 'BTCUSDT', 'timestamp': 1776790979789, 'signature': '01c08070eb5466801bcc7597c0f3ad3f64b44710f5ead3640fa42948ba93ae38'}
+2026-04-21 22:33:00 | DEBUG    | trading_bot.client | ← HTTP 200 | body: []
+2026-04-21 22:34:13 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:34:13 | INFO     | trading_bot.cli | Command: account
+2026-04-21 22:34:13 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2026-04-21 22:34:13 | DEBUG    | trading_bot.client | → GET /fapi/v2/account | params: {'timestamp': 1776791053952, 'signature': 'c861b0510c434cd7093ccb0016512108a8166e91526c7b176655243a0fef351f'}
+2026-04-21 22:34:14 | DEBUG    | trading_bot.client | ← HTTP 200 | body: {"feeTier":0,"canTrade":true,"canDeposit":true,"canWithdraw":true,"feeBurn":true,"tradeGroupId":-1,"updateTime":0,"multiAssetsMargin":false,"totalInitialMargin":"0.00000000","totalMaintMargin":"0.00000000","totalWalletBalance":"5000.00000000","totalUnrealizedProfit":"0.00000000","totalMarginBalance":"5000.00000000","totalPositionInitialMargin":"0.00000000","totalOpenOrderInitialMargin":"0.00000000","totalCrossWalletBalance":"5000.00000000","totalCrossUnPnl":"0.00000000","availableBalance":"5000.
+2026-04-21 22:34:17 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:34:17 | INFO     | trading_bot.cli | Command: open-orders
+2026-04-21 22:34:17 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2026-04-21 22:34:17 | DEBUG    | trading_bot.client | → GET /fapi/v1/openOrders | params: {'symbol': 'BTCUSDT', 'timestamp': 1776791057830, 'signature': '2ce6c61c264d15bf4df4bfaac4a8166d130f48f211298ea59a8414abeb91d150'}
+2026-04-21 22:34:18 | DEBUG    | trading_bot.client | ← HTTP 400 | body: {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-21 22:34:18 | ERROR    | trading_bot.client | API error -1021: Timestamp for this request was 1000ms ahead of the server's time.
+2026-04-21 22:34:18 | ERROR    | trading_bot.cli | Open orders fetch failed: Binance API Error -1021: Timestamp for this request was 1000ms ahead of the server's time.
+2026-04-21 22:34:41 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:34:41 | INFO     | trading_bot.cli | Command: open-orders
+2026-04-21 22:34:41 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2026-04-21 22:34:41 | DEBUG    | trading_bot.client | → GET /fapi/v1/openOrders | params: {'symbol': 'BTCUSDT', 'timestamp': 1776791081783, 'signature': 'aae710f7613b86be8461c0a8135d7b21a36b20b4fd601d67c82fbd7ec26ffb73'}
+2026-04-21 22:34:42 | DEBUG    | trading_bot.client | ← HTTP 400 | body: {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-21 22:34:42 | ERROR    | trading_bot.client | API error -1021: Timestamp for this request was 1000ms ahead of the server's time.
+2026-04-21 22:34:42 | ERROR    | trading_bot.cli | Open orders fetch failed: Binance API Error -1021: Timestamp for this request was 1000ms ahead of the server's time.
+2026-04-21 22:35:56 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:35:56 | INFO     | trading_bot.cli | Command: open-orders
+2026-04-21 22:35:56 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2026-04-21 22:35:56 | DEBUG    | trading_bot.client | → GET /fapi/v1/openOrders | params: {'symbol': 'BTCUSDT', 'timestamp': 1776791156195, 'signature': '915a30f9fd31b767ce5b8e3f2c8c2ea1e2f4b5e3840f2554c00dbd43b0100d92'}
+2026-04-21 22:35:57 | DEBUG    | trading_bot.client | ← HTTP 200 | body: []
+2026-04-21 22:36:25 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:36:25 | INFO     | trading_bot.cli | Command: place
+2026-04-21 22:36:25 | DEBUG    | trading_bot.validators | Symbol validated: BTCUSDT
+2026-04-21 22:36:25 | DEBUG    | trading_bot.validators | Side validated: BUY
+2026-04-21 22:36:25 | DEBUG    | trading_bot.validators | Order type validated: MARKET
+2026-04-21 22:36:25 | DEBUG    | trading_bot.validators | Quantity validated: 0.001
+2026-04-21 22:36:25 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2026-04-21 22:36:25 | DEBUG    | trading_bot.client | → GET /fapi/v1/ping | params: {}
+2026-04-21 22:36:26 | DEBUG    | trading_bot.client | ← HTTP 200 | body: {}
+2026-04-21 22:36:26 | INFO     | trading_bot.client | Ping successful.
+2026-04-21 22:36:26 | INFO     | trading_bot.orders | Order dispatch | {"Symbol": "BTCUSDT", "Side": "BUY", "Type": "MARKET", "Quantity": "0.001", "TimeInForce": "N/A", "Reduce Only": "False"}
+2026-04-21 22:36:26 | INFO     | trading_bot.client | Placing BUY MARKET order | symbol=BTCUSDT qty=0.001 price=None stopPrice=None
+2026-04-21 22:36:26 | DEBUG    | trading_bot.client | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1776791186737, 'signature': '65e96d9040f2479900594e6439451f4d1ee4c2f169d15847941f9af6bcc8a511'}
+2026-04-21 22:36:27 | DEBUG    | trading_bot.client | ← HTTP 400 | body: {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-21 22:36:27 | WARNING  | trading_bot.client | Timestamp drift detected. Syncing server time and retrying once.
+2026-04-21 22:36:27 | INFO     | trading_bot.client | Time offset synced: -1600ms
+2026-04-21 22:36:27 | DEBUG    | trading_bot.client | → POST /fapi/v1/order | params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1776791185623, 'signature': '10437d7783fb032064a3a03772dd0a6d7671c013789bdc316f3887e49c824c11'}
+2026-04-21 22:36:27 | DEBUG    | trading_bot.client | ← HTTP 200 | body: {"orderId":13058359548,"symbol":"BTCUSDT","status":"NEW","clientOrderId":"NcaPU8dSsoVjiZSN6451h9","price":"0.00","avgPrice":"0.00","origQty":"0.0010","executedQty":"0.0000","cumQty":"0.0000","cumQuote":"0.000000","timeInForce":"GTC","type":"MARKET","reduceOnly":false,"closePosition":false,"side":"BUY","positionSide":"BOTH","stopPrice":"0.00","workingType":"CONTRACT_PRICE","priceProtect":false,"origType":"MARKET","priceMatch":"NONE","selfTradePreventionMode":"EXPIRE_MAKER","goodTillDate":0,"updat
+2026-04-21 22:36:27 | INFO     | trading_bot.orders | Order success | id=13058359548 status=NEW executedQty=0.0000 avgPrice=0.00
+2026-04-21 22:36:50 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:36:50 | INFO     | trading_bot.cli | Command: open-orders
+2026-04-21 22:36:50 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2026-04-21 22:36:50 | DEBUG    | trading_bot.client | → GET /fapi/v1/openOrders | params: {'symbol': 'BTCUSDT', 'timestamp': 1776791210069, 'signature': '3e88892b2c549089e4f898db25eec90714bf7e5b88862c3d84456154471c00b8'}
+2026-04-21 22:36:50 | DEBUG    | trading_bot.client | ← HTTP 400 | body: {"code":-1021,"msg":"Timestamp for this request was 1000ms ahead of the server's time."}
+2026-04-21 22:36:50 | WARNING  | trading_bot.client | Timestamp drift detected. Syncing server time and retrying once.
+2026-04-21 22:36:50 | INFO     | trading_bot.client | Time offset synced: -1602ms
+2026-04-21 22:36:50 | DEBUG    | trading_bot.client | → GET /fapi/v1/openOrders | params: {'symbol': 'BTCUSDT', 'timestamp': 1776791209113, 'signature': '8b77ac1b1e5ac0318091809c24f68c6617366b3cde6698c906dcf79ad4276d13'}
+2026-04-21 22:36:51 | DEBUG    | trading_bot.client | ← HTTP 200 | body: []
+2026-04-21 22:37:44 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:37:44 | INFO     | trading_bot.cli | Command: account
+2026-04-21 22:37:44 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2026-04-21 22:37:44 | DEBUG    | trading_bot.client | → GET /fapi/v2/account | params: {'timestamp': 1776791264911, 'signature': 'cf137aa587b2165508e7c47970c27f565ca160a84f3e8ed31418190b796c254e'}
+2026-04-21 22:37:45 | DEBUG    | trading_bot.client | ← HTTP 200 | body: {"feeTier":0,"canTrade":true,"canDeposit":true,"canWithdraw":true,"feeBurn":true,"tradeGroupId":-1,"updateTime":0,"multiAssetsMargin":false,"totalInitialMargin":"3.77887647","totalMaintMargin":"0.30231011","totalWalletBalance":"4999.96967200","totalUnrealizedProfit":"-0.24247077","totalMarginBalance":"4999.72720123","totalPositionInitialMargin":"3.77887647","totalOpenOrderInitialMargin":"0.00000000","totalCrossWalletBalance":"4999.96967200","totalCrossUnPnl":"-0.24247077","availableBalance":"499
+2026-04-21 22:38:50 | DEBUG    | trading_bot | Logging initialised — file: C:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:38:50 | INFO     | trading_bot.cli | Command: account
+2026-04-21 22:38:50 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2026-04-21 22:38:50 | DEBUG    | trading_bot.client | → GET /fapi/v2/account | params: {'timestamp': 1776791330139, 'signature': 'a611f516de6fe8b5a24ceb1cc2705a14faf5bfb223f9e482c2c4bf3a0f1741c3'}
+2026-04-21 22:38:51 | DEBUG    | trading_bot.client | ← HTTP 200 | body: {"feeTier":0,"canTrade":true,"canDeposit":true,"canWithdraw":true,"feeBurn":true,"tradeGroupId":-1,"updateTime":0,"multiAssetsMargin":false,"totalInitialMargin":"3.77704000","totalMaintMargin":"0.30216320","totalWalletBalance":"4999.96967200","totalUnrealizedProfit":"-0.27920000","totalMarginBalance":"4999.69047200","totalPositionInitialMargin":"3.77704000","totalOpenOrderInitialMargin":"0.00000000","totalCrossWalletBalance":"4999.96967200","totalCrossUnPnl":"-0.27920000","availableBalance":"499
+2026-04-21 22:45:24 | DEBUG    | trading_bot | Logging initialised — file: c:\Users\pooja\OneDrive\Desktop\project\trading_bot_poojasri kumar\logs\trading_bot.log
+2026-04-21 22:45:24 | INFO     | trading_bot.cli | Command: account
+2026-04-21 22:45:24 | INFO     | trading_bot.client | BinanceFuturesClient initialised — base URL: https://testnet.binancefuture.com
+2026-04-21 22:45:24 | DEBUG    | trading_bot.client | → GET /fapi/v2/account | params: {'timestamp': 1776791724208, 'signature': '3021cf25feb2b9e7dfa59c9d8c5b54a5a80ed239e711eb1bbb153a012d66ba50'}
+2026-04-21 22:45:25 | DEBUG    | trading_bot.client | ← HTTP 200 | body: {"feeTier":0,"canTrade":true,"canDeposit":true,"canWithdraw":true,"feeBurn":true,"tradeGroupId":-1,"updateTime":0,"multiAssetsMargin":false,"totalInitialMargin":"3.77401834","totalMaintMargin":"0.30192146","totalWalletBalance":"4999.96967200","totalUnrealizedProfit":"-0.33963324","totalMarginBalance":"4999.63003876","totalPositionInitialMargin":"3.77401834","totalOpenOrderInitialMargin":"0.00000000","totalCrossWalletBalance":"4999.96967200","totalCrossUnPnl":"-0.33963324","availableBalance":"499
